@@ -1,11 +1,9 @@
-
-
 /* กำหนดการตั้งค่าเบื้องต้น */
 body {
     font-family: Arial, sans-serif; /* กำหนดฟอนต์ */
     margin: 0; /* กำหนดระยะขอบของ body เป็น 0 */
     padding: 0; /* กำหนดการเว้นช่องว่างใน body เป็น 0 */
-    box-sizing: border-box; /* ใช้ box-sizing แบบ border-box */
+    box-sizing: border-box; /* ใช้ box-sizing แบบ border-box เพื่อให้ padding และ border ไม่ทำให้ขนาดของ element เกินไป */
     background-color: #f4f4f4; /* กำหนดสีพื้นหลัง */
     text-align: center; /* จัดข้อความให้กึ่งกลาง */
 }
@@ -16,6 +14,42 @@ header {
     color: rgb(11, 11, 11); /* กำหนดสีข้อความใน header */
     padding: 1rem; /* กำหนดการเว้นระยะภายในของ header */
     width: 100%; /* กำหนดให้ header ครอบคลุมพื้นที่ทั้งหมด */
+}
+
+/* กำหนดสไตล์สำหรับเมนู (nav) */
+nav ul {
+    list-style: none; /* ยกเลิกสัญลักษณ์หัวข้อในรายการ */
+    padding: 0; /* กำหนดการเว้นช่องว่างภายในเป็น 0 */
+    display: flex; /* ใช้ flexbox ในการจัดการตำแหน่งของรายการ */
+    justify-content: space-between; /* จัดเรียงรายการให้กระจายกัน */
+    align-items: center; /* จัดแนวแนวนอนให้ตรงกลาง */
+    width: 100%; /* กำหนดความกว้างของเมนูให้เต็มความกว้างของหน้า */
+    max-width: 800px; /* จำกัดความกว้างสูงสุดของเมนู */
+    margin: auto; /* จัดกลางเมนูในหน้าจอ */
+}
+
+nav ul li {
+    flex: 1; /* ให้แต่ละรายการมีขนาดเท่ากัน */
+    text-align: center; /* จัดข้อความในรายการให้อยู่กลาง */
+}
+
+nav ul li.left {
+    text-align: left; /* จัดข้อความในรายการที่มีคลาส "left" ให้อยู่ทางซ้าย */
+}
+
+nav ul li.right {
+    text-align: right; /* จัดข้อความในรายการที่มีคลาส "right" ให้อยู่ทางขวา */
+}
+
+nav ul li a {
+    color: rgb(9, 9, 9); /* กำหนดสีของลิงก์ในเมนู */
+    text-decoration: underline; /* ขีดเส้นใต้ลิงก์ */
+    font-weight: bold; /* กำหนดให้ข้อความในลิงก์เป็นตัวหนา */
+}
+
+/* กำหนดสไตล์ของ main */
+main {
+    padding: 20px; /* กำหนดการเว้นช่องว่างภายใน */
 }
 
 /* กำหนด wrapper ให้เต็มหน้าจอและจัดตำแหน่งกรอบ */
@@ -30,7 +64,8 @@ header {
 /* กำหนดสไตล์ของกรอบใหญ่ */
 .container {
     width: 60%; /* กำหนดความกว้างของกรอบ */
-    background-color: white; /* กำหนดพื้นหลังเป็นสีขาว */
+    background-color: white;
+     /* กำหนดพื้นหลังเป็นสีขาว */
     padding: 30px; /* กำหนดการเว้นระยะภายใน */
     border-radius: 12px; /* กำหนดให้มุมของกรอบเป็นแบบโค้ง */
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.1); /* เพิ่มเงาเบาๆ ให้กับกรอบ */
@@ -40,7 +75,7 @@ header {
 /* กำหนดสไตล์สำหรับ h2 */
 h2 {
     color: #333; /* กำหนดสีข้อความ */
-    text-align: right; /* จัดข้อความให้อยู่ทางขวา */
+    text-align: left; /* จัดข้อความให้อยู่ทางขวา */
 }
 
 /* กำหนดสไตล์สำหรับ p */
@@ -48,7 +83,7 @@ p {
     font-size: 1.1em; /* กำหนดขนาดตัวอักษรให้ใหญ่ขึ้นเล็กน้อย */
     line-height: 1.6; /* กำหนดระยะห่างระหว่างบรรทัด */
     margin-bottom: 15px; /* กำหนดระยะห่างด้านล่าง */
-    text-align: right; /* จัดข้อความให้ไปทางขวา */
+    text-align: left; /* จัดข้อความให้ไปทางขวา */
     padding: 10px; /* กำหนดช่องว่างภายใน */
     border: 1px solid #ddd; /* กำหนดเส้นขอบ */
     background-color: #fafafa; /* กำหนดพื้นหลัง */
@@ -60,20 +95,4 @@ p {
     width: 80%; /* กำหนดความกว้างของ p เป็น 80% ของ container */
     margin: 0 auto; /* จัดกลาง p ใน container */
 }
-
-/* กำหนดการจัดการรูปภาพ */
-.images {
-    display: flex; /* ใช้ flexbox เพื่อจัดรูปภาพ */
-    justify-content: space-between; /* จัดเรียงรูปภาพให้ห่างกัน */
-    margin-top: 20px; /* เพิ่มระยะห่างจากเนื้อหาด้านบน */
-}
-
-.images .img {
-    width: 45%; /* กำหนดขนาดของรูปภาพให้เหมาะสม */
-    height: auto; /* กำหนดความสูงให้ยืดตามอัตราส่วน */
-    border-radius: 8px; /* ทำให้มุมของรูปภาพโค้ง */
-    border: 1px solid #ddd; /* กำหนดเส้นขอบ */
-}
-
-
 
