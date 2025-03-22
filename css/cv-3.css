@@ -1,5 +1,6 @@
 body {
     font-family: Arial, sans-serif;
+    background-color:#eed4b3;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -42,11 +43,11 @@ nav ul li a {
 main {
     padding: 20px;
 }
-footer {
+/* footer {
     background-color:#f9b050;
     color: rgb(15, 15, 15);
     padding: 1rem;
     position: fixed;
     bottom: 0;
     width: 100%;
-}
+} */

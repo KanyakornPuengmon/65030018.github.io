@@ -95,12 +95,12 @@ button {
     margin-top: 20px;
     padding: 15px 30px;  /* ขนาดปุ่มที่ใหญ่ขึ้น */
     background-color: #60bb60;
-    
     color: rgb(11, 10, 10);
     border: none;
     border-radius: 5px;
     cursor: pointer;
     font-size: 18px;  /* ขนาดตัวอักษรที่ใหญ่ขึ้น */
+    font-weight: bold
 }
 
 button:hover {
