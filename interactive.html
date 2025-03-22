@@ -1,50 +1,11 @@
-<!-- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Interactive Page</title>
-    <link rel="stylesheet" href="css/styles2.css">
-    <link rel="stylesheet" href="css/game.css">
-</head>
-<body>
-    <header>
-        <h1>Interactive Page</h1>
-        <nav>
-            <ul>
-                <li class="left"><a href="index.html">Home</a></li>
-                <li class="center"><a href="interactive.html">Interactive</a></li>
-                <li class="right"><a href="cv.html">Curriculum Vitae</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <h2>Simple JavaScript Clock</h2>
-        <p id="clock"></p>
-        <a href="index.html">Back to Home</a>
-    </main>
-    <script>
-        function updateClock() {
-            document.getElementById("clock").innerText = new Date().toLocaleTimeString();
-        }
-        setInterval(updateClock, 1000);
-        updateClock();
-    </script>
-    <footer>
-        <p>&copy; 2025 My Name</p>
-    </footer>
-</body>
-</html>  -->
 
-
-<!DOCTYPE html>
-<html lang="th">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Interactive Page</title>
-    <!-- <link rel="stylesheet" href="css/styles2.css"> -->
-    <link rel="stylesheet" href="css/game.css">
+    <link rel="stylesheet" href="css/game-2.css">
 </head>
 <body>
 
@@ -60,9 +21,8 @@
     </header>
 
     <main>
-        <h2>Simple JavaScript Clock</h2>
-        <p id="clock"></p>
-        <a href="index.html">Back to Home</a>
+        
+        <!-- <p id="clock"></p> -->
 
         <h2>เกมจับคู่ภาพผลไม้</h2>
         <div id="game-board" class="game-board">
@@ -74,11 +34,11 @@
 
     <script>
         // นาฬิกา
-        function updateClock() {
-            document.getElementById("clock").innerText = new Date().toLocaleTimeString();
-        }
-        setInterval(updateClock, 1000);
-        updateClock();
+        // function updateClock() {
+        //     document.getElementById("clock").innerText = new Date().toLocaleTimeString();
+        // }
+        // setInterval(updateClock, 1000);
+        // updateClock();
 
         // เกมจับคู่ภาพผลไม้
         const fruits = [
@@ -152,6 +112,9 @@
 
         startGame(); // เริ่มเกมเมื่อโหลดหน้า
     </script>
+    <footer>
+        <a href="index.html">Back to Home</a>
+    </footer>
 
 </body>
 </html>
