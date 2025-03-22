@@ -5,20 +5,17 @@ body {
     padding: 0;
     box-sizing: border-box;
     text-align: center;
-    background-color: #f6eeee;
+    background-color:  #d2edaf;
 }
 
 /* Header */
 
 header {
-    background-color: #78eedf;
+    background-color: #afe667;
     color: rgb(11, 11, 11);
     padding: 1rem;
     width: 100%;
 }
-/* header h1 {
-    margin: 0;
-} */
 
 /* Navigation */
 nav ul {
@@ -45,27 +42,23 @@ nav ul li.right {
     text-align: right;
 }
 
+
+/* Link Style */
 nav ul li a {
     color: rgb(9, 9, 9);
     text-decoration: underline;
     font-weight: bold;
 }
 
+
 /* Main Content */
 main {
     padding: 20px;
 }
-
-#clock {
-    font-size: 30px;
-    margin-top: 20px;
-}
-
-
 /* Game Board */
 .game-board {
     display: grid;
-    grid-template-columns: repeat(4, 100px);
+    grid-template-columns: repeat(4, 150px);  /* เพิ่มขนาดการ์ดใน grid */
     grid-gap: 10px;
     justify-content: center;
     margin-top: 20px;
@@ -73,8 +66,8 @@ main {
 
 /* Card Style */
 .card {
-    width: 100px;
-    height: 100px;
+    width: 150px;  /* ขนาดการ์ดที่ใหญ่ขึ้น */
+    height: 150px; /* ขนาดการ์ดที่ใหญ่ขึ้น */
     background-color: #ccc;
     border-radius: 10px;
     display: flex;
@@ -85,9 +78,10 @@ main {
     font-size: 24px;
 }
 
+/* Image in Card */
 .card img {
-    width: 80%;
-    height: 80%;
+    width: 90%;    /* ขนาดรูปภาพที่ใหญ่ขึ้น */
+    height: 90%;   /* ขนาดรูปภาพที่ใหญ่ขึ้น */
     display: none;
     border-radius: 5px;
 }
@@ -99,22 +93,22 @@ main {
 /* Button */
 button {
     margin-top: 20px;
-    padding: 10px 20px;
-    background-color: #4CAF50;
+    padding: 15px 30px;  /* ขนาดปุ่มที่ใหญ่ขึ้น */
+    background-color: #60bb60;
+    
     color: rgb(11, 10, 10);
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    font-size: 18px;  /* ขนาดตัวอักษรที่ใหญ่ขึ้น */
 }
 
 button:hover {
     background-color: #45a049;
 }
 
-/* Link Style */
-nav ul li a {
-    color: rgb(9, 9, 9);
-    text-decoration: underline;
-    font-weight: bold;
-}
+
+
+
+
 
