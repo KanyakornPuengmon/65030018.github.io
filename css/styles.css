@@ -6,7 +6,7 @@ body {
     box-sizing: border-box;
     text-align: center;
     background-color: #fff1fd; /* เปลี่ยนพื้นหลังเป็นสีอ่อน */
-}
+}  
 
 /* สไตล์ส่วน Header และ Footer */
 header, footer {
@@ -15,7 +15,8 @@ header, footer {
     padding: 1.5rem;
     width: 100%;
     font-size: 1.2rem;
-}
+}  
+
 
 /* จัดไอคอนให้อยู่กลางหน้า */
 .icon-container {
