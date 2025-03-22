@@ -1,10 +1,11 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Interactive Page</title>
     <link rel="stylesheet" href="css/styles2.css">
+    <link rel="stylesheet" href="css/game.css">
 </head>
 <body>
     <header>
@@ -32,5 +33,125 @@
     <footer>
         <p>&copy; 2025 My Name</p>
     </footer>
+</body>
+</html>  -->
+
+
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Page</title>
+    <!-- <link rel="stylesheet" href="css/styles2.css"> -->
+    <link rel="stylesheet" href="css/game.css">
+</head>
+<body>
+
+    <header>
+        <h1>Interactive Page</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="interactive.html">Interactive</a></li>
+                <li><a href="cv.html">Curriculum Vitae</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Simple JavaScript Clock</h2>
+        <p id="clock"></p>
+        <a href="index.html">Back to Home</a>
+
+        <h2>เกมจับคู่ภาพผลไม้</h2>
+        <div id="game-board" class="game-board">
+
+        </div>
+        <button onclick="startGame()">เริ่มเกมใหม่</button>
+    </main>
+
+
+    <script>
+        // นาฬิกา
+        function updateClock() {
+            document.getElementById("clock").innerText = new Date().toLocaleTimeString();
+        }
+        setInterval(updateClock, 1000);
+        updateClock();
+
+        // เกมจับคู่ภาพผลไม้
+        const fruits = [
+            'apple', 'banana', 'cherry', 'grape',
+            'apple', 'banana', 'cherry', 'grape'
+        ];
+
+        let flippedCards = [];
+        let matchedCards = 0;
+
+        function startGame() {
+            matchedCards = 0;
+            flippedCards = [];
+            const board = document.getElementById("game-board");
+            board.innerHTML = ''; // รีเซ็ต board
+            shuffle(fruits); // สุ่มการ์ด
+            fruits.forEach(fruit => {
+                const card = createCard(fruit);
+                board.appendChild(card);
+            });
+        }
+
+        function createCard(fruit) {
+            const card = document.createElement('div');
+            card.classList.add('card');
+            card.dataset.fruit = fruit;
+
+            const img = document.createElement('img');
+            img.src = `images/${fruit}.png`; // ภาพผลไม้ต้องอยู่ในโฟลเดอร์ images
+            card.appendChild(img);
+
+            card.addEventListener('click', flipCard);
+            return card;
+        }
+
+        function flipCard(event) {
+            const card = event.target;
+            if (flippedCards.length < 2 && !card.classList.contains('flipped')) {
+                card.classList.add('flipped');
+                flippedCards.push(card);
+
+                if (flippedCards.length === 2) {
+                    checkMatch();
+                }
+            }
+        }
+
+        function checkMatch() {
+            const [card1, card2] = flippedCards;
+            if (card1.dataset.fruit === card2.dataset.fruit) {
+                matchedCards++;
+                flippedCards = [];
+                if (matchedCards === fruits.length / 2) {
+                    alert('ยินดีด้วย! คุณชนะ!');
+                }
+            } else {
+                setTimeout(() => {
+                    card1.classList.remove('flipped');
+                    card2.classList.remove('flipped');
+                    flippedCards = [];
+                }, 1000);
+            }
+        }
+
+        function shuffle(array) {
+            for (let i = array.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [array[i], array[j]] = [array[j], array[i]];
+            }
+        }
+
+        startGame(); // เริ่มเกมเมื่อโหลดหน้า
+    </script>
+
 </body>
 </html>
