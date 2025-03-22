@@ -6,7 +6,7 @@ body {
     text-align: center;
 }
 header {
-    background-color: #f388f3;
+    background-color:#f9b050;
     color: rgb(11, 11, 11);
     padding: 1rem;
     width: 100%;
@@ -39,12 +39,11 @@ nav ul li a {
     font-weight: bold;
 }
 
-
 main {
     padding: 20px;
 }
 footer {
-    background-color: #f388f3;
+    background-color:#f9b050;
     color: rgb(15, 15, 15);
     padding: 1rem;
     position: fixed;
