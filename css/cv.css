@@ -1,0 +1,156 @@
+/* กำหนดการตั้งค่าเบื้องต้น */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+/* กำหนดสไตล์ของ header */
+header {
+    background-color: #f9b050;
+    color: rgb(11, 11, 11);
+    padding: 0.8rem; /* ลด padding ให้กระชับขึ้น */
+    width: 100%;
+}
+
+/* กำหนดสไตล์สำหรับเมนู (nav) */
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 800px;
+    margin: auto;
+}
+
+nav ul li {
+    flex: 1;
+    text-align: center;
+    margin: 0;
+    padding: 0 10px;
+}
+
+nav ul li.left {
+    text-align: left;
+}
+
+nav ul li.right {
+    text-align: right;
+}
+
+nav ul li a {
+    color: rgb(9, 9, 9);
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+/* กำหนดสไตล์ของ main */
+main {
+    padding: 15px; /* ลด padding */
+    text-align: center;
+}
+
+/* กำหนดสไตล์สำหรับ h2 */
+h2 {
+    color: #333;
+    text-align: center;
+    margin-bottom: 5px; /* ลดช่องว่างด้านล่าง */
+}
+
+/* กำหนดสไตล์สำหรับ p */
+p {
+    font-size: 1em; /* ปรับให้เล็กลงเล็กน้อย */
+    line-height: 1.4; /* ลดระยะห่างระหว่างบรรทัด */
+    margin-bottom: 10px; /* ลดช่องว่างด้านล่าง */
+    text-align: left;
+    padding: 8px; /* ลด padding */
+    border: 1px solid #ddd;
+    background-color: #fafafa;
+    border-radius: 6px; /* ลดความโค้ง */
+}
+
+/* ปรับการจัดวางข้อมูลส่วนตัว */
+.personal-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px; /* ลดช่องว่างระหว่างแต่ละส่วน */
+}
+
+/* ปรับการจัดวาง input fields */
+input, .info-box {
+    display: inline-block;
+    padding: 6px 10px;
+    margin-bottom: 5px; /* ลดระยะห่าง */
+    border-radius: 6px;
+    border: 1px solid #ddd;
+    background-color: #fff;
+    text-align: left;
+}
+
+/* Responsive Layout */
+.wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px; /* ลดช่องว่างระหว่าง container */
+    padding: 15px;
+    align-items: stretch;
+}
+
+.container, .images {
+    background-color: white;
+    padding: 15px; /* ลด padding */
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border: 1px solid #ddd;
+    width: 100%;
+    max-width: 580px; /* ลดความกว้างลง */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex: 1;
+}
+
+.images {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+
+.img {
+    width: 100%; /* ลดขนาดภาพ */
+    height: auto;
+    border-radius: 4px; /* ลดมุมโค้ง */
+    border: 0.5px solid #ddd; /* ลดขนาดเส้นขอบ */
+    margin-bottom: 5px; /* ลดช่องว่างด้านล่าง */
+}
+
+/* Media Queries for Larger Screens */
+@media (min-width: 768px) {
+    .wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: stretch;
+    }
+
+    .container, .images {
+        flex: 1;
+        max-width: 48%;
+        min-height: 100%;
+    }
+
+    .images {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+}
