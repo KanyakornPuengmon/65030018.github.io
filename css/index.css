@@ -1,4 +1,4 @@
-/* รีเซ็ตพื้นฐาน */
+
 * {
     margin: 0;
     padding: 0;
@@ -6,9 +6,8 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Boldonse', sans-serif;
     text-align: center;
-    background-image: url('your-image-url-here'); /* 🔹 ใส่รูปพื้นหลัง */
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -16,11 +15,14 @@ body {
 
 /* สไตล์ Header และ Footer */
 header, footer {
-    background-color: #f369f3;
+    text-align: center;
     color: rgb(13, 13, 13);
-    padding: 1.5rem;
-    font-size: 1.2rem;
+    padding: 3rem;
+    padding-top: 5rem;
+    padding-bottom: 1rem;
+    font-size: 2rem;
     width: 100%;
+    font-size: 35px;
 }
 
 /* จัดไอคอนให้อยู่กลาง */
@@ -29,9 +31,9 @@ header, footer {
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    height: 70vh;
-    gap: 50px;
-    padding: 20px;
+    height: 50vh;
+    gap: 60px;
+    padding: 2px;
 }
 
 /* สไตล์ไอคอน */
@@ -42,7 +44,7 @@ header, footer {
 }
 
 .icon-container a {
-    font-size: 80px;
+    font-size: 100px;
     color: rgb(9, 9, 9);
     text-decoration: none;
     transition: transform 0.3s ease, color 0.3s ease;
@@ -51,7 +53,7 @@ header, footer {
 /* คำบรรยายใต้ไอคอน */
 .icon-container figcaption {
     margin-top: 10px;
-    font-size: 18px;
+    font-size: 20px;
     font-weight: bold;
     color: black;
 }
@@ -90,12 +92,12 @@ footer {
     .icon-container {
         flex-direction: column;
         height: auto;
-        gap: 30px;
+        gap: 50px;
         padding: 40px 0;
     }
 
     .icon-container a {
-        font-size: 50px;
+        font-size: 70px;
     }
 
     .icon-container figcaption {
@@ -103,7 +105,7 @@ footer {
     }
 
     header, footer {
-        font-size: 1rem;
+        font-size: 2rem;
         padding: 1rem;
     }
 }

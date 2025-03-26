@@ -4,41 +4,44 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Game Page</title>
-
     <link rel="stylesheet" href="css/game-2.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rowdies:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-image: url('images/bg3.png'); /* 🔹 ใส่รูปพื้นหลัง */
+        }
+    </style>
 </head>
 <body>
-
     <header>
         <h1>Fruit picture matching game</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="game-2.html">Games</a></li>
-                <li><a href="cv.html">Profile</a></li>
-            </ul>
-        </nav>
+        
     </header>
 
     <main>
+        <div class="icon-container">
+            <figure>
+                <a href="index.html"><i class="fa-solid fa-house"></i></a>
+                <figcaption>Home</figcaption>
+            </figure>
+            
+            <figure>
+                <a href="cv.html"><i class="fa-solid fa-user"></i></a>
+                <figcaption>Profile</figcaption>
+            </figure>
+        </div>
         
-        <!-- <p id="clock"></p> -->
-
         <h2>เกมจับคู่ภาพผลไม้</h2>
         <div id="game-board" class="game-board">
-
-        </div>
         <button onclick="startGame()">เริ่มเกมใหม่</button>
     </main>
 
 
     <script>
-        // นาฬิกา
-        // function updateClock() {
-        //     document.getElementById("clock").innerText = new Date().toLocaleTimeString();
-        // }
-        // setInterval(updateClock, 1000);
-        // updateClock();
+       
 
         // เกมจับคู่ภาพผลไม้
         const fruits = [
@@ -112,7 +115,6 @@
 
         startGame(); // เริ่มเกมเมื่อโหลดหน้า
     </script>
-   <a href="index.html">Back to Home</a>
 
 </body>
 </html>
