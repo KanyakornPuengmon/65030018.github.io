@@ -1,6 +1,6 @@
 /* กำหนดการตั้งค่าเบื้องต้น */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Boldonse', sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -11,47 +11,25 @@ body {
 /* กำหนดสไตล์ของ header */
 header {
     background-color: #f9b050;
+    font-size: 15px;
     color: rgb(11, 11, 11);
-    padding: 0.8rem; /* ลด padding ให้กระชับขึ้น */
+    padding-top: 1rem;
+    padding-bottom: 1rem;
     width: 100%;
+    display: flex; /* ใช้ flexbox สำหรับจัดตำแหน่ง */
+    justify-content: space-between; /* จัดไอคอนให้อยู่ซ้ายและขวา */
+    align-items: center; /* จัดให้เนื้อหาภายใน header อยู่กลาง */
 }
 
-/* กำหนดสไตล์สำหรับเมนู (nav) */
-nav ul {
-    list-style: none;
-    padding: 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    max-width: 800px;
-    margin: auto;
-}
-
-nav ul li {
-    flex: 1;
-    text-align: center;
-    margin: 0;
-    padding: 0 10px;
-}
-
-nav ul li.left {
-    text-align: left;
-}
-
-nav ul li.right {
-    text-align: right;
-}
-
-nav ul li a {
-    color: rgb(9, 9, 9);
-    text-decoration: underline;
-    font-weight: bold;
+/* สำหรับตำแหน่งของ header */
+header .header-text {
+    flex-grow: 1; /* ทำให้ข้อความใน header ขยายเต็มที่ */
+    text-align: center; /* จัดให้ข้อความอยู่กลาง */
 }
 
 /* กำหนดสไตล์ของ main */
 main {
-    padding: 15px; /* ลด padding */
+    padding: 15px;
     text-align: center;
 }
 
@@ -59,19 +37,19 @@ main {
 h2 {
     color: #333;
     text-align: center;
-    margin-bottom: 5px; /* ลดช่องว่างด้านล่าง */
+    margin-bottom: 5px;
 }
 
 /* กำหนดสไตล์สำหรับ p */
 p {
-    font-size: 1em; /* ปรับให้เล็กลงเล็กน้อย */
-    line-height: 1.4; /* ลดระยะห่างระหว่างบรรทัด */
-    margin-bottom: 10px; /* ลดช่องว่างด้านล่าง */
+    font-size: 25px;
+    line-height: 1.4;
+    margin-bottom: 10px;
     text-align: left;
-    padding: 8px; /* ลด padding */
+    padding: 8px;
     border: 1px solid #ddd;
     background-color: #fafafa;
-    border-radius: 6px; /* ลดความโค้ง */
+    border-radius: 6px;
 }
 
 /* ปรับการจัดวางข้อมูลส่วนตัว */
@@ -79,14 +57,14 @@ p {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    gap: 5px; /* ลดช่องว่างระหว่างแต่ละส่วน */
+    gap: 5px;
 }
 
 /* ปรับการจัดวาง input fields */
 input, .info-box {
     display: inline-block;
     padding: 6px 10px;
-    margin-bottom: 5px; /* ลดระยะห่าง */
+    margin-bottom: 5px;
     border-radius: 6px;
     border: 1px solid #ddd;
     background-color: #fff;
@@ -98,19 +76,19 @@ input, .info-box {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 15px; /* ลดช่องว่างระหว่าง container */
+    gap: 15px;
     padding: 15px;
     align-items: stretch;
 }
 
 .container, .images {
     background-color: white;
-    padding: 15px; /* ลด padding */
+    padding: 15px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     border: 1px solid #ddd;
     width: 100%;
-    max-width: 580px; /* ลดความกว้างลง */
+    max-width: 580px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -125,13 +103,12 @@ input, .info-box {
     align-items: flex-start;
 }
 
-
 .img {
-    width: 100%; /* ลดขนาดภาพ */
+    width: 100%;
     height: auto;
-    border-radius: 4px; /* ลดมุมโค้ง */
-    border: 0.5px solid #ddd; /* ลดขนาดเส้นขอบ */
-    margin-bottom: 5px; /* ลดช่องว่างด้านล่าง */
+    border-radius: 4px;
+    border: 0.5px solid #ddd;
+    margin-bottom: 5px;
 }
 
 /* Media Queries for Larger Screens */
@@ -153,4 +130,70 @@ input, .info-box {
         flex-direction: column;
         justify-content: center;
     }
+}
+
+/* จัดไอคอนให้อยู่กลาง */
+.icon-container {
+    display: flex;
+    gap: 50px; /* ระยะห่างระหว่างไอคอน */
+}
+
+/* สไตล์ไอคอน */
+.icon-container figure {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* คำบรรยายใต้ไอคอน */
+.icon-container figcaption {
+    margin-top: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    color: black;
+}
+
+/* เอฟเฟกต์เมื่อโฮเวอร์ */
+.icon-container a:hover {
+    transform: scale(1.2);
+    color: #5a005a;
+}
+
+/* ไอคอนใน header */
+header .icon-container a {
+    font-size: 30px; /* ขนาดไอคอน */
+    color: rgb(9, 9, 9);
+    text-decoration: none;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+/* ไอคอนใน header */
+header .icon-container {
+    display: flex;
+    justify-content: space-between; /* จัดให้ไอคอนอยู่ซ้ายและขวา */
+    width: 100%;
+}
+
+header .icon-container a {
+    font-size: 30px;
+    color: rgb(9, 9, 9);
+    text-decoration: none;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+header .icon-container a:hover {
+    transform: scale(1.2);
+    color: #5a005a;
+}
+
+/* สำหรับตำแหน่งของ header */
+header .header-text {
+    flex-grow: 1; /* ทำให้ข้อความใน header ขยายเต็มที่ */
+    text-align: center; /* จัดให้ข้อความอยู่กลาง */
+}
+
+.header-text{
+    font-size: 40px;
+    padding-top: 1.5rem;
+    font-weight: bold;
 }
