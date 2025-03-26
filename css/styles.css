@@ -5,7 +5,7 @@ body {
     padding: 0;
     box-sizing: border-box;
     text-align: center;
-    background-color: #fff1fd; /* เปลี่ยนพื้นหลังเป็นสีอ่อน */
+    background-color: #fff1fd; 
 }  
 
 /* สไตล์ส่วน Header และ Footer */
@@ -48,3 +48,6 @@ footer {
     left: 0;
     text-align: center;
 }
+
+
+

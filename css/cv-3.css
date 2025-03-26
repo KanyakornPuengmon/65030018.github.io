@@ -19,19 +19,21 @@ header {
 
 /* กำหนดสไตล์สำหรับเมนู (nav) */
 nav ul {
-    list-style: none; /* ยกเลิกสัญลักษณ์หัวข้อในรายการ */
-    padding: 0; /* กำหนดการเว้นช่องว่างภายในเป็น 0 */
-    display: flex; /* ใช้ flexbox ในการจัดการตำแหน่งของรายการ */
-    justify-content: space-between; /* จัดเรียงรายการให้กระจายกัน */
-    align-items: center; /* จัดแนวแนวนอนให้ตรงกลาง */
-    width: 100%; /* กำหนดความกว้างของเมนูให้เต็มความกว้างของหน้า */
-    max-width: 800px; /* จำกัดความกว้างสูงสุดของเมนู */
-    margin: auto; /* จัดกลางเมนูในหน้าจอ */
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 800px;
+    margin: auto;
 }
 
 nav ul li {
     flex: 1; /* ให้แต่ละรายการมีขนาดเท่ากัน */
-    text-align: center; /* จัดข้อความในรายการให้อยู่กลาง */
+    text-align: center;
+    margin: 0; /* ยกเลิกระยะห่างระหว่างรายการ */
+    padding: 0 10px; /* เพิ่มระยะห่างซ้ายขวาให้รายการ */
 }
 
 nav ul li.left {
@@ -50,33 +52,14 @@ nav ul li a {
 
 /* กำหนดสไตล์ของ main */
 main {
-    padding: 20px; /* กำหนดการเว้นช่องว่างภายใน */
-}
-
-/* กำหนด wrapper ให้เต็มหน้าจอและจัดตำแหน่งกรอบ */
-.wrapper {
-    display: flex;
-    justify-content: flex-end; /* จัดกรอบไปทางขวาของหน้าจอ */
-    align-items: flex-start; /* จัดกรอบที่ด้านบน */
-    height: 100vh; /* กำหนดความสูงให้เต็มหน้าจอ */
-    padding-right: 20px;
-}
-
-/* กำหนดสไตล์ของกรอบใหญ่ */
-.container {
-    width: 60%; /* กำหนดความกว้างของกรอบ */
-    background-color: white;
-     /* กำหนดพื้นหลังเป็นสีขาว */
-    padding: 30px; /* กำหนดการเว้นระยะภายใน */
-    border-radius: 12px; /* กำหนดให้มุมของกรอบเป็นแบบโค้ง */
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1); /* เพิ่มเงาเบาๆ ให้กับกรอบ */
-    border: 2px solid #ddd; /* กำหนดเส้นขอบ */
+    padding: 20px;
+    
 }
 
 /* กำหนดสไตล์สำหรับ h2 */
 h2 {
     color: #333; /* กำหนดสีข้อความ */
-    text-align: left; /* จัดข้อความให้อยู่ทางขวา */
+    text-align: left; /* จัดข้อความให้อยู่ทางซ้าย */
 }
 
 /* กำหนดสไตล์สำหรับ p */
@@ -91,34 +74,70 @@ p {
     border-radius: 8px; /* กำหนดให้มุมเป็นแบบโค้ง */
 }
 
-/* กำหนดขนาดให้ p อยู่กลาง */
-.container p {
-    width: 80%; /* กำหนดความกว้างของ p เป็น 80% ของ container */
-    margin: 0 auto; /* จัดกลาง p ใน container */
-}
-.images {
-    width: 35%; /* ปรับให้กว้างพอ */
+/* Responsive Layout */
+.wrapper {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: rgb(255, 255, 255);
-    padding: 30px;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+    align-items: stretch;
+}
+
+.container, .images {
+    background-color: white;
+    padding: 20px;
     border-radius: 12px;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
     border: 2px solid #ddd;
+    width: 100%;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex: 1;
+    text-align: left;
 }
 
-/* กำหนดสไตล์รูปภาพ */
+.images {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    text-align: left;
+}
+
 .img {
-    width: 100%; /* ให้รูปภาพเต็มกรอบ */
+    width: 100%;
     height: auto;
     border-radius: 8px;
     border: 1px solid #ddd;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
+    flex-grow: 1;
 }
 
+/* Media Queries for Larger Screens */
+@media (min-width: 768px) {
+    .wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: stretch;
+    }
 
+    .container, .images {
+        flex: 1;
+        max-width: 48%;
+        min-height: 100%;
+    }
 
-
+    .images {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+  
+    
+}
 
 

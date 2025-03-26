@@ -1,0 +1,85 @@
+/* รีเซ็ตพื้นฐาน */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #fff1fd;
+}
+
+/* สไตล์ Header และ Footer */
+header, footer {
+    background-color: #f369f3;
+    color: rgb(13, 13, 13);
+    padding: 1.5rem;
+    font-size: 1.2rem;
+    width: 100%;
+}
+
+/* จัดไอคอนให้อยู่กลาง */
+.icon-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap; /* ให้ไอคอนเรียงใหม่ถ้าหน้าจอเล็ก */
+    height: 60vh;
+    gap: 80px; /* ลดช่องว่างให้น้อยลงสำหรับ responsive */
+    padding: 20px;
+}
+
+/* สไตล์ไอคอน */
+.icon-container a {
+    font-size: 80px; /* ลดขนาดไอคอนลงเพื่อให้รองรับหน้าจอเล็ก */
+    color: rgb(9, 9, 9);
+    text-decoration: none;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+/* เอฟเฟกต์เมื่อโฮเวอร์ */
+.icon-container a:hover {
+    transform: scale(1.2);
+    color: #5a005a;
+}
+
+/* ตรึง Footer ไว้ด้านล่าง */
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .icon-container {
+        flex-direction: row;
+        gap: 40px; /* ลดระยะห่างในจอเล็ก */
+    }
+
+    .icon-container a {
+        font-size: 60px; /* ลดขนาดไอคอน */
+    }
+}
+
+@media (max-width: 480px) {
+    .icon-container {
+        flex-direction: column; /* ให้ไอคอนเรียงแนวตั้ง */
+        height: auto;
+        gap: 30px;
+        padding: 40px 0;
+    }
+
+    .icon-container a {
+        font-size: 50px;
+    }
+
+    header, footer {
+        font-size: 1rem;
+        padding: 1rem;
+    }
+}
