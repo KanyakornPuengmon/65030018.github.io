@@ -8,7 +8,10 @@
 body {
     font-family: Arial, sans-serif;
     text-align: center;
-    background-color: #fff1fd;
+    background-image: url('your-image-url-here'); /* 🔹 ใส่รูปพื้นหลัง */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
 }
 
 /* สไตล์ Header และ Footer */
@@ -25,18 +28,32 @@ header, footer {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-wrap: wrap; /* ให้ไอคอนเรียงใหม่ถ้าหน้าจอเล็ก */
-    height: 60vh;
-    gap: 80px; /* ลดช่องว่างให้น้อยลงสำหรับ responsive */
+    flex-wrap: wrap;
+    height: 70vh;
+    gap: 50px;
     padding: 20px;
 }
 
 /* สไตล์ไอคอน */
+.icon-container figure {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .icon-container a {
-    font-size: 80px; /* ลดขนาดไอคอนลงเพื่อให้รองรับหน้าจอเล็ก */
+    font-size: 80px;
     color: rgb(9, 9, 9);
     text-decoration: none;
     transition: transform 0.3s ease, color 0.3s ease;
+}
+
+/* คำบรรยายใต้ไอคอน */
+.icon-container figcaption {
+    margin-top: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    color: black;
 }
 
 /* เอฟเฟกต์เมื่อโฮเวอร์ */
@@ -57,18 +74,21 @@ footer {
 /* Responsive Design */
 @media (max-width: 768px) {
     .icon-container {
-        flex-direction: row;
-        gap: 40px; /* ลดระยะห่างในจอเล็ก */
+        gap: 40px;
     }
 
     .icon-container a {
-        font-size: 60px; /* ลดขนาดไอคอน */
+        font-size: 60px;
+    }
+
+    .icon-container figcaption {
+        font-size: 16px;
     }
 }
 
 @media (max-width: 480px) {
     .icon-container {
-        flex-direction: column; /* ให้ไอคอนเรียงแนวตั้ง */
+        flex-direction: column;
         height: auto;
         gap: 30px;
         padding: 40px 0;
@@ -76,6 +96,10 @@ footer {
 
     .icon-container a {
         font-size: 50px;
+    }
+
+    .icon-container figcaption {
+        font-size: 14px;
     }
 
     header, footer {
