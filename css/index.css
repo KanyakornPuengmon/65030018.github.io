@@ -13,7 +13,6 @@ body {
     background-color: rgb(247, 227, 244); /* เปลี่ยนสีพื้นหลัง */
     color: #333; /* สีข้อความที่คมชัดกับพื้นหลัง */
 }
-
 /* สไตล์ Header และ Footer */
 header, footer {
     text-align: center;
