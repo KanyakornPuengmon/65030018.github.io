@@ -80,7 +80,6 @@ header, footer {
     transition: transform 0.15s ease-out, box-shadow 0.15s ease-out;
     will-change: transform, box-shadow;
 }
-
 .icon-container a {
     font-size: 34px;
     color: rgb(9, 9, 9);
