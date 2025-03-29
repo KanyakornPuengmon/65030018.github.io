@@ -91,20 +91,15 @@ header, footer {
     transform: scale(1.1); /* ลดการขยายของไอคอน */
     color: #5a005a;
 }
-
 /* เอฟเฟกต์เมื่อโฮเวอร์กรอบ */
 .icon-container figure:hover {
     transform: translateY(-10px); /* ทำให้กรอบเคลื่อนไหวขึ้นเหมือนลอย */
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6); /* เพิ่มความเข้มข้นของเงาเมื่อโฮเวอร์ */
 }
-
 h1{
     font-size: 25px;
     padding-bottom: 2rem;
 }
-
-
-
 /* CSS ที่ไม่จำเป็นสำหรับการแสดงผลทันที สามารถเลื่อนโหลดได้ */
 @media print {
     link[rel="stylesheet"] {
