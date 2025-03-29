@@ -96,7 +96,7 @@ header, footer {
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6); /* เพิ่มความเข้มข้นของเงาเมื่อโฮเวอร์ */
 }
 h1{
-    font-size: 25px;
+    font-size: 22px;
     padding-bottom: 1rem;
 }
 /* CSS ที่ไม่จำเป็นสำหรับการแสดงผลทันที สามารถเลื่อนโหลดได้ */
