@@ -10,7 +10,7 @@ body {
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
-    background-color: antiquewhite;
+    background-color: rgb(248, 237, 248);
 }
 
 /* สไตล์ Header และ Footer */
@@ -18,11 +18,10 @@ header, footer {
     text-align: center;
     color: rgb(13, 13, 13);
     padding: 3rem;
-    padding-top: 6rem;
-    padding-bottom: 1rem;
+    padding-top: 10rem;
     font-size: 1rem;
     width: 100%;
-    font-size: 25px;
+    font-size: 20px;
 }
 
 /* จัดไอคอนให้อยู่กลาง */
@@ -31,7 +30,7 @@ header, footer {
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    height: 50vh;
+    height: 30vh;
     gap: 60px;
     padding: 2px;
 }
