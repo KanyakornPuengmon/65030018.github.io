@@ -65,7 +65,8 @@ header, footer {
     max-width: 600px;
     justify-items: center;
 }
-/* สไตล์ไอคอน */
+
+/* สไตล์ไอคอน (เอากรอบออก) */
 .icon-container figure {
     display: flex;
     flex-direction: column;
@@ -73,20 +74,19 @@ header, footer {
     padding-left: 20px;
     padding-right: 20px;
     padding-bottom: 10px;
-    border: 3px solid var(--primary-color);
-    border-radius: 6px;
     background: #fff;
     box-shadow: 0 2px 6px var(--shadow-light);
     transition: transform 0.15s ease-out, box-shadow 0.15s ease-out;
     will-change: transform, box-shadow;
 }
+
 .icon-container a {
-   
     font-size: 50px;
     color: rgb(9, 9, 9);
     text-decoration: none;
     transition: color 0.15s ease-out;
 }
+
 .icon-container figcaption {
     margin-top: 5px;
     font-size: 15px;
@@ -103,3 +103,4 @@ header, footer {
     transform: translateY(-2px) translateZ(0);
     box-shadow: 0 4px 10px var(--shadow-dark);
 }
+
