@@ -63,9 +63,9 @@ header, footer {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 25px;
+    padding: 30px;
     border: 4px solid #5a005a; /* กรอบสี */
-    border-radius: 120%; /* ให้กรอบเป็นวงกลม */
+    border-radius: 10%; /* ให้กรอบเป็นวงกลม */
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.4); /* เงาเพื่อสร้างเอฟเฟกต์ 3D */
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -80,7 +80,7 @@ header, footer {
 
 /* คำบรรยายใต้ไอคอน */
 .icon-container figcaption {
-    margin-top: 8px;
+    margin-top: 0px;
     font-size: 18px; /* ลดขนาดคำบรรยาย */
     font-weight: bold;
     color: black;
