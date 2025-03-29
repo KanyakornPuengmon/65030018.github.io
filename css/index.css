@@ -10,7 +10,8 @@ body {
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
-    background-color: beige;
+    background-color: rgb(247, 227, 244); /* เปลี่ยนสีพื้นหลัง */
+    color: #333; /* สีข้อความที่คมชัดกับพื้นหลัง */
 }
 
 /* สไตล์ Header และ Footer */
@@ -20,9 +21,8 @@ header, footer {
     padding: 3rem;
     padding-top: 5rem;
     padding-bottom: 1rem;
-    font-size: 1rem;
     width: 100%;
-    font-size: 35px;
+    font-size: 25px;
 }
 
 /* จัดไอคอนให้อยู่กลาง */
@@ -62,50 +62,4 @@ header, footer {
 .icon-container a:hover {
     transform: scale(1.2);
     color: #5a005a;
-}
-
-/* ตรึง Footer ไว้ด้านล่าง */
-footer {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    text-align: center;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    .icon-container {
-        gap: 40px;
-    }
-
-    .icon-container a {
-        font-size: 60px;
-    }
-
-    .icon-container figcaption {
-        font-size: 16px;
-    }
-}
-
-@media (max-width: 480px) {
-    .icon-container {
-        flex-direction: column;
-        height: auto;
-        gap: 50px;
-        padding: 40px 0;
-    }
-
-    .icon-container a {
-        font-size: 70px;
-    }
-
-    .icon-container figcaption {
-        font-size: 14px;
-    }
-
-    header, footer {
-        font-size: 2rem;
-        padding: 1rem;
-    }
 }
