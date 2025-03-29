@@ -1,129 +1,112 @@
-/* Base styles for all screen sizes */
-body {
-    font-family: 'Open Sans', sans-serif;
-    background-color: #f7e3f4;
-    color: #333;
-    text-align: center;
-    padding: 40px 20px;
+* {
     margin: 0;
+    padding: 0;
     box-sizing: border-box;
-    display: flex;
-    justify-content: center;  /* Center horizontally */
-    align-items: center;      /* Center vertically */
-    min-height: 80vh;        /* Full height of the viewport */
 }
 
-/* Main heading */
-h1 {
-    font-size: 2px;
-    font-weight: bold;
-    color: #090909;
-    margin-bottom: 10px;
-    transition: color 0.3s ease;
+body {
+    font-family: 'Boldonse', sans-serif;
+    text-align: center;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-color: antiquewhite;
 }
 
-/* Hover effect for heading */
-h1:hover {
-    color: #8c1e8c;
+/* สไตล์ Header และ Footer */
+header, footer {
+    text-align: center;
+    color: rgb(13, 13, 13);
+    padding: 3rem;
+    padding-top: 6rem;
+    padding-bottom: 1rem;
+    font-size: 1rem;
+    width: 100%;
+    font-size: 25px;
 }
 
-/* Icon container */
+/* จัดไอคอนให้อยู่กลาง */
 .icon-container {
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
-    gap: 30px;
-    margin-top: 20px;
+    align-items: center;
+    flex-wrap: wrap;
+    height: 50vh;
+    gap: 60px;
+    padding: 2px;
 }
 
-/* Individual icon items */
+/* สไตล์ไอคอน */
 .icon-container figure {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 20px;
-    border: 4px solid #5a005a;
-    border-radius: 12px;
-    background-color: #fff;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    width: 120px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    cursor: pointer;
 }
 
-.icon-container figure:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
-}
-
-/* Icon size and style */
 .icon-container a {
-    font-size: 40px;
-    color: #5a005a;
+    font-size: 100px;
+    color: rgb(9, 9, 9);
     text-decoration: none;
-    transition: color 0.3s ease;
+    transition: transform 0.3s ease, color 0.3s ease;
 }
 
-/* Hover effect for icon */
-.icon-container a:hover {
-    color: #8c1e8c;
-}
-
-/* Caption styling */
+/* คำบรรยายใต้ไอคอน */
 .icon-container figcaption {
     margin-top: 10px;
-    font-size: 16px;
+    font-size: 20px;
     font-weight: bold;
-    color: #090909;
+    color: black;
 }
 
-/* For mobile devices */
-@media (max-width: 600px) {
-    h1 {
-        font-size: 1.8rem;
-    }
+/* เอฟเฟกต์เมื่อโฮเวอร์ */
+.icon-container a:hover {
+    transform: scale(1.2);
+    color: #5a005a;
+}
 
+/* ตรึง Footer ไว้ด้านล่าง */
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
     .icon-container {
-        flex-direction: column;
-        gap: 15px;
-    }
-
-    .icon-container figure {
-        width: 90px;
-        padding: 15px;
+        gap: 40px;
     }
 
     .icon-container a {
-        font-size: 35px;
+        font-size: 60px;
+    }
+
+    .icon-container figcaption {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .icon-container {
+        flex-direction: column;
+        height: auto;
+        gap: 50px;
+        padding: 40px 0;
+    }
+
+    .icon-container a {
+        font-size: 70px;
     }
 
     .icon-container figcaption {
         font-size: 14px;
     }
-}
 
-/* For larger screens (tablet, desktop) */
-@media (min-width: 601px) {
-    h1 {
-        font-size: 2.5rem;
-    }
-
-    .icon-container {
-        flex-direction: row;
-        gap: 30px;
-    }
-
-    .icon-container figure {
-        width: 150px;
-    }
-
-    .icon-container a {
-        font-size: 50px;
-    }
-
-    .icon-container figcaption {
-        font-size: 18px;
+    header, footer {
+        font-size: 2rem;
+        padding: 1rem;
     }
 }
-
 
