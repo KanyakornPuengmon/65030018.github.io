@@ -14,6 +14,29 @@ body {
     color: #333; /* สีข้อความที่คมชัดกับพื้นหลัง */
 }
 
+/* กรอบของ Main */
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 800px; /* กำหนดความกว้างให้ไม่กว้างเกินไป */
+    margin: 2rem auto; /* จัดให้อยู่กลางหน้า */
+    padding: 2rem;
+    padding-bottom: 2rem;
+    border: 4px solid #5a005a; /* กรอบสี */
+    border-radius: 30px; /* ทำให้ขอบโค้งมน */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.4); /* เพิ่มเงาแบบ 3D */
+    background-color: #fff; /* เพิ่มพื้นหลังให้ main ตัดกับพื้นหลังหน้าเว็บ */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* เอฟเฟกต์เมื่อโฮเวอร์ที่ Main */
+main:hover {
+    transform: translateY(-5px); /* ทำให้ดูเหมือนลอยขึ้นเล็กน้อย */
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6); /* เพิ่มความเข้มของเงา */
+}
+
 /* สไตล์ Header และ Footer */
 header, footer {
     text-align: center;
@@ -22,7 +45,7 @@ header, footer {
     padding-top: 8rem;
     padding-bottom: 0.5rem;
     width: 100%;
-    font-size: 20px; /* ลดขนาดตัวอักษร */
+    font-size: 15px; /* ขนาดตัวอักษร */
 }
 
 /* จัดไอคอนให้อยู่กลาง */
@@ -31,7 +54,6 @@ header, footer {
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    height: 50vh;
     gap: 40px; /* ลดระยะห่างระหว่างไอคอน */
     padding: 10px;
 }
@@ -41,7 +63,7 @@ header, footer {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 50px;
+    padding: 25px;
     border: 4px solid #5a005a; /* กรอบสี */
     border-radius: 120%; /* ให้กรอบเป็นวงกลม */
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.4); /* เงาเพื่อสร้างเอฟเฟกต์ 3D */
@@ -76,10 +98,16 @@ header, footer {
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6); /* เพิ่มความเข้มข้นของเงาเมื่อโฮเวอร์ */
 }
 
+h1{
+    font-size: 35px;
+    padding-bottom: 1rem;
+}
+
 /* CSS ที่ไม่จำเป็นสำหรับการแสดงผลทันที สามารถเลื่อนโหลดได้ */
 @media print {
     link[rel="stylesheet"] {
         media: print;
     }
 }
+
 
