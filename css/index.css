@@ -60,12 +60,12 @@ header, footer {
 .icon-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
-    padding: 10px;
+    padding: 20px;
     width: 100%;
     gap: 10px;
     max-width: 600px;
     justify-items: center;
-    font-size: 15px;
+    font-size: 20px;
 }
 
 .icon-container a {
