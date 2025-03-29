@@ -7,11 +7,8 @@
 body {
     font-family: 'Boldonse', sans-serif;
     text-align: center;
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    background-color: rgb(247, 227, 244); /* เปลี่ยนสีพื้นหลัง */
-    color: #333; /* สีข้อความที่คมชัดกับพื้นหลัง */
+    background-color: rgb(247, 227, 244);
+    color: #333;
 }
 
 /* กรอบของ Main */
@@ -20,32 +17,33 @@ main {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    max-width: 800px; /* กำหนดความกว้างให้ไม่กว้างเกินไป */
-    margin: 2rem auto; /* จัดให้อยู่กลางหน้า */
+    max-width: 800px;
+    margin: 2rem auto;
     padding: 2rem;
-    padding-bottom: 2rem;
-    border: 4px solid #5a005a; /* กรอบสี */
-    border-radius: 30px; /* ทำให้ขอบโค้งมน */
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.4); /* เพิ่มเงาแบบ 3D */
-    background-color: #fff; /* เพิ่มพื้นหลังให้ main ตัดกับพื้นหลังหน้าเว็บ */
+    border: 4px solid #5a005a;
+    border-radius: 30px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+    background-color: #fff;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* เอฟเฟกต์เมื่อโฮเวอร์ที่ Main */
 main:hover {
-    transform: translateY(-5px); /* ทำให้ดูเหมือนลอยขึ้นเล็กน้อย */
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6); /* เพิ่มความเข้มของเงา */
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6);
 }
 
-/* สไตล์ Header และ Footer */
+/* Header และ Footer */
 header, footer {
     text-align: center;
     color: rgb(13, 13, 13);
-    padding: 2rem;
-    padding-top: 8rem;
-    padding-bottom: 0.5rem;
+    padding: 2rem 0;
     width: 100%;
-    font-size: 15px; /* ขนาดตัวอักษร */
+    font-size: 15px;
+}
+
+h1 {
+    font-size: 22px;
+    margin-bottom: 1rem;
 }
 
 /* จัดไอคอนให้อยู่กลาง */
@@ -54,56 +52,45 @@ header, footer {
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    gap: 40px; /* ลดระยะห่างระหว่างไอคอน */
+    gap: 40px;
     padding: 10px;
 }
+
 /* สไตล์ไอคอน */
 .icon-container figure {
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 30px;
-    border: 4px solid #5a005a; /* กรอบสี */
-    border-radius: 10%; /* ให้กรอบเป็นวงกลม */
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.4); /* เงาเพื่อสร้างเอฟเฟกต์ 3D */
+    border: 4px solid #5a005a;
+    border-radius: 10%;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* สไตล์ของลิงก์ในไอคอน */
 .icon-container a {
-    font-size: 60px; /* ลดขนาดไอคอน */
+    font-size: 60px;
     color: rgb(9, 9, 9);
     text-decoration: none;
     transition: transform 0.3s ease, color 0.3s ease;
 }
 
-/* คำบรรยายใต้ไอคอน */
 .icon-container figcaption {
-    margin-top: 0px;
-    font-size: 18px; /* ลดขนาดคำบรรยาย */
+    margin-top: 8px;
+    font-size: 18px;
     font-weight: bold;
     color: black;
 }
 
-/* เอฟเฟกต์เมื่อโฮเวอร์ */
 .icon-container a:hover {
-    transform: scale(1.1); /* ลดการขยายของไอคอน */
+    transform: scale(1.1);
     color: #5a005a;
 }
-/* เอฟเฟกต์เมื่อโฮเวอร์กรอบ */
+
 .icon-container figure:hover {
-    transform: translateY(-10px); /* ทำให้กรอบเคลื่อนไหวขึ้นเหมือนลอย */
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6); /* เพิ่มความเข้มข้นของเงาเมื่อโฮเวอร์ */
+    transform: translateY(-10px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6);
 }
-h1{
-    font-size: 22px;
-    padding-bottom: 1rem;
-}
-/* CSS ที่ไม่จำเป็นสำหรับการแสดงผลทันที สามารถเลื่อนโหลดได้ */
-@media print {
-    link[rel="stylesheet"] {
-        media: print;
-    }
-}
+
 
 
