@@ -103,6 +103,8 @@ h1{
     padding-bottom: 2rem;
 }
 
+
+
 /* CSS ที่ไม่จำเป็นสำหรับการแสดงผลทันที สามารถเลื่อนโหลดได้ */
 @media print {
     link[rel="stylesheet"] {
