@@ -13,8 +13,9 @@ body {
     background-color: rgb(247, 227, 244); /* เปลี่ยนสีพื้นหลัง */
     color: #333; /* สีข้อความที่คมชัดกับพื้นหลัง */
 }
+
 /* สไตล์ Header และ Footer */
-header, footer {
+header {
     text-align: center;
     color: rgb(13, 13, 13);
     padding: 3rem;
@@ -22,6 +23,28 @@ header, footer {
     padding-bottom: 1rem;
     width: 100%;
     font-size: 25px;
+    border: 5px solid transparent; /* เริ่มต้นกรอบโปร่งใส */
+    position: relative;
+    animation: borderAnimation 3s ease-in-out infinite; /* เริ่มการเคลื่อนไหวของกรอบ */
+}
+
+/* การเคลื่อนไหวของกรอบ */
+@keyframes borderAnimation {
+    0% {
+        border-color: transparent; /* กรอบโปร่งใส */
+    }
+    25% {
+        border-color: #5a005a; /* กรอบสีชมพู */
+    }
+    50% {
+        border-color: #ff6600; /* กรอบสีส้ม */
+    }
+    75% {
+        border-color: #0099cc; /* กรอบสีน้ำเงิน */
+    }
+    100% {
+        border-color: transparent; /* กรอบโปร่งใส */
+    }
 }
 
 /* จัดไอคอนให้อยู่กลาง */
