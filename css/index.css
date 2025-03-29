@@ -86,9 +86,8 @@ footer {
 /* Responsive Design */
 @media (max-width: 768px) {
     .icon-container {
-        gap: 40px;
+        gap: 80px;
     }
-
     .icon-container a {
         font-size: 60px;
     }
