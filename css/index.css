@@ -104,27 +104,3 @@ footer {
     }
 
 }
-
-@media (max-width: 480px) {
-    .icon-container {
-        flex-direction: column;
-        height: auto;
-        gap: 50px;
-        padding: 40px 0;
-    }
-
-    .icon-container a {
-        font-size: 70px;
-    }
-
-    .icon-container figcaption {
-        font-size: 14px;
-    }
-
-    header, footer {
-        font-size: 2rem;
-        padding: 1rem;
-    }
-
-   
-}
