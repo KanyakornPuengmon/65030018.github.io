@@ -103,7 +103,30 @@ footer {
         margin-top: 10px;
     }
     h1{
-        margin-top: 1rem;
-        font-size: 18px;
+        font-size: 10px;
     }
+}
+
+@media (max-width: 480px) {
+    .icon-container {
+        flex-direction: column;
+        height: auto;
+        gap: 50px;
+        padding: 40px 0;
+    }
+
+    .icon-container a {
+        font-size: 70px;
+    }
+
+    .icon-container figcaption {
+        font-size: 14px;
+    }
+
+    header, footer {
+        font-size: 2rem;
+        padding: 1rem;
+    }
+
+   
 }
