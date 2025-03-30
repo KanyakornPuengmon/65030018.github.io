@@ -11,7 +11,7 @@ body {
 /* Header */
 header {
     background-color: #afe667;
-    font-size: 18px;
+    font-size: 16px;
     color: rgb(11, 11, 11);
     padding-top: 1rem;
     padding-bottom: 1rem;
@@ -90,11 +90,11 @@ button:hover {
         grid-template-columns: repeat(2, 1fr);
         gap: 2px;
         max-width: 500px;
-        padding-left: 4rem;
+        padding-left: 3rem;
     }
 
     .card {
-        font-size: 16px;
+        font-size: 14px;
         
     }
 
@@ -102,6 +102,14 @@ button:hover {
         font-size: 14px;
         padding: 8px 16px;
         margin-top: 20px;
+    }
+    header {
+        font-size: 14px;
+        color: rgb(11, 11, 11);
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        margin-top: 1px;  /* ลดระยะห่างจากด้านบน */
+        margin-bottom: 1px; /* ระยะห่างด้านล่าง */
     }
 }
 
