@@ -34,6 +34,8 @@ header .header-text {
     font-weight: bold;
 }
 
+
+
 /* ปรับ main ไม่ให้ทับ header */
 main {
     margin-top: 10rem;
